@@ -1,0 +1,189 @@
+:root {
+  --background-color: #fbfcff;
+  --dark-blue: #315db9;
+  --light-blue: #b9d0ff;
+  --dark-purple: #6e3d93;
+  --darker-purple: #3e1467;
+  --purple-shadow: #433057a6;
+  --dark-blue-transparency: #315cb91A;
+  --site-font: 'Jacques Francois';
+  --title-font: 'Bree Serif';
+  --index-font: 'Inter';
+}
+
+body {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  height: 100dvh;
+  background: linear-gradient(180deg, rgba(110, 61, 147, 1) 0%, rgba(62, 20, 103, 1) 100%);
+  box-shadow: 5px 0px 10px var(--purple-shadow);
+}
+
+.sidebar hr {
+  border: 1px solid white;
+  width: 80%;
+  color: white;
+}
+
+.sidebar #logo {
+  width: calc(100% - 10px);
+  margin: 5px;
+}
+
+#index {
+  width: 200px;
+  height: calc(100dvh - 135px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar div ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+
+.sidebar div ul a {
+  font-family: var(--index-font);
+  color: white;
+  display: flex;
+  text-decoration: none;
+}
+
+main {
+  width: 100dvw;
+}
+
+/* Main profile content */
+.profile {
+  flex: 1;
+  padding: 30px;
+  position: relative;
+}
+
+.banner {
+  height: 250px;
+  background-color: var(--light-blue);
+  border: solid var(--dark-purple);
+  border-radius: 4px;
+  margin: 0 30px 40px 0;
+}
+
+.profile-box {
+  position: relative;
+  margin-left: 20px;
+}
+.profile-box div p {
+  font-family: var(--index-font);
+}
+
+.avatar {
+  width: 140px;
+  height: 140px;
+  background-color: #E6D3FF;
+  border: solid var(--dark-purple);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: -70px;
+  left: 20px;
+  z-index: 10;
+}
+
+.avatar::before {
+  content: '\1F464';
+  font-size: 60px;
+  color: var(--dark-purple);
+}
+
+.user-info {
+  margin-left: 180px;
+}
+
+.nickname {
+  font-family: var(--title-font);
+  color: var(--dark-purple);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.username {
+  color: var(--dark-purple);
+  font-size: 14px;
+}
+
+.description {
+  margin-top: 10px;
+  color: var(--dark-purple);
+  font-size: 14px;
+}
+
+/* Botão de edição */
+#edit-btn {
+  margin-left: 200px;
+  margin-top: 20px;
+  padding: 8px 16px;
+  background-color: var(--dark-purple);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: var(--index-font);
+  font-size: 14px;
+}
+
+#edit-btn:hover {
+  background-color: #3E1467;
+}
+
+/* Estilo dos inputs no modo de edição */
+.input-edit {
+  font-family: var(--index-font);
+  font-size: 14px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 6px;
+  color: var(--dark-purple);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Estilo do modal que aparece ao clicar em 'minha conta' */
+#modal_minha_conta {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    top: 75%;
+    left: 225px;
+    width: 100px;
+    height: 100px;
+    background-color: var(--background-color);
+    box-shadow: 3px 3px 10px var(--purple-shadow);
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+#modal_minha_conta ul {
+    margin: 0;
+    padding: 0;
+}
+
+#modal_minha_conta a {
+    font-family: var(--index-font);
+    color: var(--dark-purple);
+}
