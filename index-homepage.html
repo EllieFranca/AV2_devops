@@ -14,31 +14,32 @@
 </head>
 
 <body>
-    <div class="menulateral">
-        <div class="logo">
-            <div class="logo-box">
-                <h1>Booklyn</h1>
+       <aside class="sidebar">
+        <img src="images/booklyn-logo.png" alt="" id="logo">
+        <div id="index">
+            <div>
+                <hr>
+                <ul>
+                    <a href="index-homepage.html">Home</a>
+                    <a href="index-profile.html">Perfil</a>
+                    <a href="index-clubs.html">Clubes</a>
+                </ul>
+            </div>
+            <div>
+                <hr>
+                <ul>
+                    <a id="minha_conta" onclick="mostrar_modal(event)">Minha conta</a>
+                </ul>
+            </div>
+            <div id="modal_minha_conta" style="display:none;">
+                <ul>
+                    <a href="index-adm.html"> Modo ADM</a>
+                    <a href="index-logincad.html">Deslogar</a>
+                    <a onclick="fechar_modal(event)">Fechar</a>
+                </ul>
             </div>
         </div>
-        <!-- links com outras pagins, substituir # pelo nome do arquivo(html)-->
-        <nav class="menu">
-            <ul>
-                <li><a href="index-homepage.html" class="botoes">Home</a></li>
-                <li><a href="index-profile.html" class="botoes">Perfil</a></li>
-                <li><a href="index-clubs.html" class="botoes">Clubes</a></li>
-            </ul>
-        </nav>
-        <div class="conta">
-            <a id="minha_conta" onclick="mostrar_modal(event)">Minha conta</a>
-        </div>
-        <div id="modal_minha_conta" style="display:none;">
-            <ul>
-                <a href="index-adm.html"> Modo ADM</a>
-                <a href="index-logincad.html">Deslogar</a>
-                <a onclick="fechar_modal(event)">Fechar</a>
-            </ul>
-        </div>
-    </div>
+    </aside>
     <div class="conteudo">
         <section class="clubes">
             <h2 class="titulos">> Seus Clubes</h2>

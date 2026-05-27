@@ -1,95 +1,80 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url(https://fonts.googleapis.com/css2?family=Bree+Serif);
+@import url(https://fonts.googleapis.com/css2?family=Inter);
+@import url(https://fonts.googleapis.com/css2?family=Jacques+Francois);
+
+:root {
+    --background-color: #fbfcff;
+    --dark-blue: #315db9;
+    --light-blue: #b9d0ff;
+    --dark-purple: #6e3d93;
+    --darker-purple: #3e1467;
+    --purple-shadow: #433057a6;
+    --dark-blue-transparency: #315cb91A;
+    --site-font: 'Jacques Francois';
+    --title-font: 'Bree Serif';
+    --index-font: 'Inter';
+}
+
+.div_oculta {
+    display: none;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #FBFCFF;
     display: flex;
-    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
 }
-.titulos {
-    font-family: 'Bree Serif', serif;
-    font-weight: bold;
-    font-size: 18px;
-    color: #6E3D9E;
-    margin-bottom: 15px;
-}
-.menulateral {
+
+.sidebar {
     width: 200px;
-    background: linear-gradient(to bottom, #6E3D9E, #3E1467);
-    color: white;
-    padding: 20px;
+    height: 100%;
     position: fixed;
-    height: 100vh;
+    background: linear-gradient(180deg, rgba(110, 61, 147, 1) 0%, rgba(62, 20, 103, 1) 100%);
+    box-shadow: 5px 0px 10px var(--purple-shadow);
+}
+
+.sidebar hr {
+    border: 1px solid white;
+    width: 80%;
+    color: white;
+}
+
+.sidebar #logo {
+    width: calc(100% - 10px);
+    margin: 5px;
+}
+
+#index {
+    width: 200px;
+    height: calc(100dvh - 135px);
     display: flex;
     flex-direction: column;
-    box-shadow: 3px 3px 10px #433057a6;
+    justify-content: space-between;
 }
 
-.logo {
-    margin-bottom: 30px;
+.sidebar div ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
 }
 
-.logo-box {
-    background-color: #315DB9;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    border: 3px solid white;
-}
-
-.logo h1 {
-    font-family: 'Jacques Francois', serif;
-    font-size: 24px;
+.sidebar div ul a {
+    font-family: var(--index-font);
     color: white;
-    margin: 0;
-}
-
-.menu {
-    flex-grow: 1;
-}
-
-.menu ul {
-    list-style: none;
-    margin-top: 20px;
-}
-
-.menu li {
-    margin-bottom: 15px;
-}
-
-.botoes {
-    color: white;
+    display: flex;
     text-decoration: none;
-    font-size: 16px;
-    padding: 8px 0;
-    display: block;
-    transition: color 0.3s;
-}
-
-.botoes:hover {
-    color: #B9D0FF;
-}
-
-.conta {
-    margin-top: auto;
-    padding-top: 20px;
-    border-top: 2px solid rgba(255, 255, 255, 0.3);
-}
-
-.conta a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
     cursor: pointer;
 }
 
+main {
+    width: 100dvw;
+}
+
 .conteudo {
-    margin-left: 200px;
     flex: 1;
+    margin-left: 200px;
     padding: 20px 40px;
 }
 
@@ -97,8 +82,7 @@ body {
     font-family: 'Bree Serif', serif;
     font-weight: bold;
     font-size: 18px;
-    color: #333;
-    margin-bottom: 20px;
+    color: var(--dark-purple);
 }
 
 .container {
@@ -109,7 +93,7 @@ body {
 
 .card {
     width: 180px;
-    height: 200px;
+    height: 180px;
     background-color: #C4C4C4;
     border-radius: 8px;
     cursor: pointer;
@@ -209,8 +193,8 @@ body {
     left: 225px;
     width: 100px;
     height: 100px;
-    background-color: #fbfcff;
-    box-shadow: 3px 3px 10px #433057a6;
+    background-color: var(--background-color);
+    box-shadow: 3px 3px 10px var(--purple-shadow);
     border-radius: 10px;
     z-index: 1000;
 }
@@ -221,6 +205,6 @@ body {
 }
 
 #modal_minha_conta a {
-    font-family: 'Inter', sans-serif;
-    color: #6e3d93;
+    font-family: var(--index-font);
+    color: var(--dark-purple);
 }
